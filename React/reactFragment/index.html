@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+
+
+
+
+
+
+    <script>
+        // const root = document.querySelector('#root');
+        // const element = document.createElement('h1');
+        // element.textContent = 'hello world';
+        // element.className = 'heading-1';
+        // root.appendChild(element);
+
+        const root = document.querySelector('#root');
+        const p1 = React.createElement('p',{
+            children : 'Paragraf 1'
+        })
+        const p2 = React.createElement('p',{
+            children : 'Paragraf 2'
+        })
+        const element = React.createElement(React.Fragment,{
+            children : [p1,p2]
+        })
+        ReactDOM.render(element,root);
+        
+    </script>
+</body>
+</html>
